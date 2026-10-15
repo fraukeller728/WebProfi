@@ -90,6 +90,55 @@
 
         </div>
 
+        <!-- NEUER BEREICH: KOPIERFERTIGE HTML-VORLAGE -->
+        <h2>Hilfe-Bereich: Komplettes HTML-Beispiel</h2>
+        <div class="step">
+            <h3>Kopierfertige HTML-Vorlage für neue Seiten</h3>
+            <p>Wenn du unsicher bist, wie eine komplette HTML-Datei aufgebaut sein muss, kannst du diesen Code kopieren, in eine neue Datei einfügen und anpassen:</p>
+            
+            <div style="background: #111; color: #fff; padding: 20px; border-radius: 6px; margin-top: 15px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; line-height: 1.5;">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Meine neue Seite&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Automatisches Menü --&gt;
+    &lt;header id="header-placeholder"&gt;&lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section class="hero"&gt;
+            &lt;h1&gt;Willkommen auf meiner Seite! 🚀&lt;/h1&gt;
+            &lt;p class="subtitle"&gt;Hier entsteht mein Projekt.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;h2&gt;Über mich&lt;/h2&gt;
+        &lt;div class="card-grid"&gt;
+            &lt;div class="step"&gt;
+                &lt;h3&gt;Mein Thema&lt;/h3&gt;
+                &lt;p&gt;Hier schreibe ich meinen Text...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;!-- Skript zum Laden der nav.html --&gt;
+    &lt;script&gt;
+        fetch('nav.html')
+            .then(response =&gt; response.text())
+            .then(data =&gt; {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+        </div>
+
+        
         <div style="margin-top: 40px;">
             <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Anleitung</a>
         </div>
