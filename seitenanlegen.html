@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neue Seiten anlegen – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Neue Seiten anlegen & verlinken 📄</h1>
+            <p class="subtitle">Eine Website besteht meist aus mehreren Seiten. Hier lernst du, wie du neue HTML-Dateien erstellst und sie in dein Navigationsmenü einbindest.</p>
+        </section>
+
+        <h2>In 3 Schritten zu deiner neuen Unterseite</h2>
+
+        <div class="card-grid">
+
+            <!-- SCHRITT 1: NEUE DATEI ERSTELLEN -->
+            <div class="step">
+                <h3>01. Neue HTML-Datei auf GitHub erstellen</h3>
+                <p>Erstelle für jede neue Unterseite eine eigene Datei in deinem Repository.</p>
+                <ul class="step-list">
+                    <li>Klicke in deinem GitHub-Repository auf <strong>Add file</strong> &rarr; <strong>Create new file</strong>.</li>
+                    <li>Vergib einen kurzen, kleingeschriebenen Namen ohne Leerzeichen (z. B. <code>ueber-mich.html</code> oder <code>projekte.html</code>).</li>
+                    <li>Füge das grundlegende HTML-Gerüst ein und klicke unten auf <strong>Commit changes...</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 2: GRUNDGERÜST FÜR NEUE SEITEN -->
+            <div class="step">
+                <h3>02. Vorlage für deine neue Seite</h3>
+                <p>Kopiere diesen Code als Startpunkt für jede deiner neuen Seiten:</p>
+                <ul class="step-list">
+                    <li><code>&lt;!DOCTYPE html&gt;</code></li>
+                    <li><code>&lt;html lang="de"&gt;</code></li>
+                    <li><code>&lt;head&gt;</code><br>
+                        &nbsp;&nbsp;<code>&lt;meta charset="UTF-8"&gt;</code><br>
+                        &nbsp;&nbsp;<code>&lt;title&gt;Meine neue Seite&lt;/title&gt;</code><br>
+                        &nbsp;&nbsp;<code>&lt;link rel="stylesheet" href="style.css"&gt;</code><br>
+                        <code>&lt;/head&gt;</code></li>
+                    <li><code>&lt;body&gt;</code><br>
+                        &nbsp;&nbsp;<code>&lt;header id="header-placeholder"&gt;&lt;/header&gt;</code><br>
+                        &nbsp;&nbsp;<code>&lt;main&gt;... Dein Inhalt ...&lt;/main&gt;</code><br>
+                        &nbsp;&nbsp;<code>&lt;script&gt;fetch('nav.html').then(r =&gt; r.text()).then(d =&gt; document.getElementById('header-placeholder').innerHTML = d);&lt;/script&gt;</code><br>
+                        <code>&lt;/body&gt;&lt;/html&gt;</code></li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 3: IN DIE NAVIGATION EINBINDEN -->
+            <div class="step">
+                <h3>03. Ins Navigationsmenü (`nav.html`) eintragen</h3>
+                <p>Damit Besucher deine neue Seite auch finden, musst du sie in der <code>nav.html</code> verlinken.</p>
+                <ul class="step-list">
+                    <li>Öffne deine Datei <code>nav.html</code> auf GitHub und klicke auf das Stift-Symbol (Bearbeiten).</li>
+                    <li>Füge einen neuen Listenpunkt hinzu:<br>
+                        <code>&lt;li&gt;&lt;a href="ueber-mich.html"&gt;Über mich&lt;/a&gt;&lt;/li&gt;</code>
+                    </li>
+                    <li>Oder füge die Seite im Dropdown-Menü ein:<br>
+                        <code>&lt;a href="ueber-mich.html"&gt;&lt;strong&gt;Über mich&lt;/strong&gt;&lt;span&gt;Mehr über mein Projekt&lt;/span&gt;&lt;/a&gt;</code>
+                    </li>
+                    <li>Speichere mit <strong>Commit changes...</strong>. Die Änderung ist sofort auf <strong>allen</strong> Seiten sichtbar!</li>
+                </ul>
+            </div>
+
+            <!-- TIPP BEREICH -->
+            <div class="step">
+                <h3>💡 Wichtige Tipps für Dateinamen:</h3>
+                <ul class="step-list">
+                    <li>Schreibe Dateinamen immer <strong>klein</strong> (z. B. <code>kontakt.html</code> statt <code>Kontakt.html</code>).</li>
+                    <li>Vermeide Leerzeichen und Umlaute (nutze <code>ue</code> statt <code>ü</code>, <code>-</code> statt Leerzeichen).</li>
+                    <li>Ende immer auf <code>.html</code>!</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Anleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
