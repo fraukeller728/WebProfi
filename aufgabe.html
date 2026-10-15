@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt-Aufgabe – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Deine Projekt-Aufgabe 🎯</h1>
+            <p class="subtitle">Jetzt bist du am Zug! Wende dein Wissen an und erstelle deine eigene, funktionierende Website auf GitHub Pages.</p>
+        </section>
+
+        <h2>Die Challenge: Was baust du?</h2>
+
+        <div class="card-grid">
+
+            <!-- DAS PROJEKTZIEL -->
+            <div class="step">
+                <h3>01. Das Thema wählen</h3>
+                <p>Du hast freie Wahl! Erstelle eine Mini-Website zu einem Thema deiner Wahl:</p>
+                <ul class="step-list">
+                    <li><strong>Option A:</strong> Deine persönliche digitale Visitenkarte (Über mich, Hobbys, Lieblingsmusik).</li>
+                    <li><strong>Option B:</strong> Eine Fan-Page zu deinem Lieblingsspiel, Sportverein oder einer Band.</li>
+                    <li><strong>Option C:</strong> Ein Infoportal zu einem Schulfach oder Lieblingsthema (z. B. Weltall, Tiere, Geschichte).</li>
+                </ul>
+            </div>
+
+            <!-- DIE PFLICHTTEILE -->
+            <div class="step">
+                <h3>02. Pflichtelemente (Checkliste)</h3>
+                <p>Deine Website muss folgende technische Elemente enthalten:</p>
+                <ul class="step-list">
+                    <li>Mindestens <strong>zwei miteinander verlinkte Seiten</strong> (z. B. Startseite <code>index.html</code> und eine Unterseite).</li>
+                    <li>Sauber strukturierte Überschriften (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>) und Textabsätze (<code>&lt;p&gt;</code>).</li>
+                    <li>Mindestens eine funktionierende <strong>Liste</strong> oder Aufzählung.</li>
+                    <li>Ein eingebundener <strong>Link</strong> (z. B. zu einer externen Info-Quelle).</li>
+                    <li>Das Design muss über die zentrale <code>style.css</code> (Farben, Abstände, Schriftart) angepasst sein.</li>
+                </ul>
+            </div>
+
+            <!-- MEILENSTEINE -->
+            <div class="step">
+                <h3>03. Meilensteine für den Unterricht</h3>
+                <p>Arbeite Schritt für Schritt auf das Endergebnis hin:</p>
+                <ul class="step-list">
+                    <li><strong>Meilenstein 1:</strong> GitHub-Konto einrichten, Repository anlegen und die Seite live schalten.</li>
+                    <li><strong>Meilenstein 2:</strong> Inhalte in der <code>index.html</code> schreiben und das Design mit CSS verfeinern.</li>
+                    <li><strong>Meilenstein 3:</strong> Eine zweite Unterseite anlegen und über das Menü erreichbar machen.</li>
+                    <li><strong>Meilenstein 4:</strong> Am Ende den Live-Link abgeben und stolz herzeigen! 🚀</li>
+                </ul>
+            </div>
+
+            <!-- BEWERTUNG / ERFOLG -->
+            <div class="step">
+                <h3>04. Worauf kommt es an?</h3>
+                <p>Am Ende zählt nicht Perfektion, sondern dass:</p>
+                <ul class="step-list">
+                    <li>Deine Website fehlerfrei im Internet unter deiner GitHub-URL erreichbar ist.</li>
+                    <li>Der Code sauber und lesbar formatiert ist.</li>
+                    <li>Du kreativ warst und Spaß am Ausprobieren hattest!</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
 
