@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown-Menü bauen – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Das Dropdown-Menü 🔽</h1>
+            <p class="subtitle">Erfahre, wie man ein modernes Aufklappmenü baut, das sich beim Darüberfahren (Mouseover) mit der Maus sanft öffnet.</p>
+        </section>
+
+        <h2>Wie funktioniert der Aufklapp-Effekt?</h2>
+
+        <div class="card-grid">
+
+            <!-- SCHRITT 1: DIE STRUKTUR IN HTML -->
+            <div class="step">
+                <h3>01. Die Verschachtelung in HTML (`nav.html`)</h3>
+                <p>Das Untermenü liegt als eigener Container innerhalb eines Listenpunktes (<code>&lt;li class="dropdown"&gt;</code>):</p>
+                <ul class="step-list">
+                    <li>Der Hauptpunkt bekommt die Klasse <code>.dropdown</code>.</li>
+                    <li>Darin befindet sich ein Container <code>&lt;div class="mega-dropdown"&gt;</code> mit deinen Unterlinks.</li>
+                    <li>Durch diese Verschachtelung "weiß" der Browser, welche Links zusammengehören.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 2: DAS VERSTECKEN IM ZUSTAND NORMAL -->
+            <div class="step">
+                <h3>02. Standardmäßig unsichtbar (`style.css`)</h3>
+                <p>Im normalen Zustand ist das Dropdown-Fenster nicht zu sehen:</p>
+                <ul class="step-list">
+                    <li><code>display: none;</code> – Blendet das Menü komplett aus.</li>
+                    <li><code>position: absolute;</code> – Platzierte das Untermenü direkt unter dem Hauptknopf, ohne den restlichen Inhalt zu verschieben.</li>
+                    <li><code>position: relative;</code> (am Hauptpunkt) – Das Dropdown orientiert sich exakt an seinem Eltern-Button.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 3: DER HOVER-TRICK -->
+            <div class="step">
+                <h3>03. Die Magie von `:hover`</h3>
+                <p>Sobald die Maus über den Hauptpunkt fährt, schaltet das CSS das Menü sichtbar:</p>
+                <ul class="step-list">
+                    <li><code>.dropdown:hover .mega-dropdown { display: block; }</code></li>
+                    <li><em>Bedeutung:</em> "Wenn die Maus über <code>.dropdown</code> schwebt (hover), setze den Zustand von <code>.mega-dropdown</code> auf sichtbar!"</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 4: FEINSCHLIFF (SCHATTEN & ABSTÄNDE) -->
+            <div class="step">
+                <h3>04. Der Agentur-Look für das Menü</h3>
+                <p>Für den schicken, modernen Look sorgen ein paar zusätzliche CSS-Tricks:</p>
+                <ul class="step-list">
+                    <li><code>box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);</code> – Erzeugt einen weichen Schatten unter der Box.</li>
+                    <li><code>border-radius: 8px;</code> – Sorgt für sanft abgerundete Ecken.</li>
+                    <li><code>transition: background-color 0.2s;</code> – Lässt die Unterpunkte beim Drüberfahren sanft die Farbe wechseln.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
 
