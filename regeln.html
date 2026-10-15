@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielregeln fürs Projekt – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Spielregeln fürs Projekt 📋</h1>
+            <p class="subtitle">Damit alles fair bleibt, jede_r optimal lernen kann und das Projekt ein voller Erfolg wird, gelten diese vier klaren Regeln.</p>
+        </section>
+
+        <h2>Fairplay & Arbeitsweise</h2>
+
+        <div class="card-grid">
+
+            <!-- REGEL 1 -->
+            <div class="step">
+                <h3>01. Eigenes Projekt</h3>
+                <p>Jede_r bearbeitet seine GitHub-Seite komplett <strong>alleine</strong>. Du bist der Chef / die Chefin deines eigenen Repositories und trägst die Verantwortung für deine Website.</p>
+            </div>
+
+            <!-- REGEL 2 -->
+            <div class="step">
+                <h3>02. KI-Nutzung ist erlaubt</h3>
+                <p>Die Arbeit mit Künstlicher Intelligenz (z. B. als Assistenz zum Erklären von Code oder Finden von Ideen) ist ausdrücklich erlaubt. Wichtig dabei:</p>
+                <ul class="step-list">
+                    <li>Alle generierten Texte und Codes müssen von dir <strong>kritisch verifiziert</strong> (überprüft) werden.</li>
+                    <li>Du musst verstehen, was dein Code tut!</li>
+                </ul>
+            </div>
+
+            <!-- REGEL 3 -->
+            <div class="step">
+                <h3>03. Kein Abschreiben</h3>
+                <p>Abschreiben oder das direkte Teilen von Code mit anderen ist <strong>nicht erlaubt</strong>.</p>
+                <ul class="step-list">
+                    <li>Kopiere keine fremden Repositories oder fertigen Quelltexte von Mitschüler_innen.</li>
+                    <li>Hilfestellung und Tipps geben ist super – aber jede_r schreibt den Code selbst.</li>
+                </ul>
+            </div>
+
+            <!-- REGEL 4 -->
+            <div class="step">
+                <h3>04. Finde deinen eigenen Stil</h3>
+                <p>Sei kreativ und gestalte eine Website, die zu dir passt:</p>
+                <ul class="step-list">
+                    <li>Recherchiere vorher im Internet nach Webseiten, Agenturen oder Designs, die dir richtig gut gefallen.</li>
+                    <li>Verwende diese als Inspiration und Referenz für dein eigenes Design.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
