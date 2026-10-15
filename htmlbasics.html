@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>HTML Basics 🧩</h1>
+            <p class="subtitle">HTML ist das Gerüst jeder Website. Hier findest du die wichtigsten Bausteine, die du für deine eigene Seite brauchst.</p>
+        </section>
+
+        <h2>Die wichtigsten HTML-Elemente</h2>
+
+        <div class="card-grid">
+
+            <!-- ÜBERSCHRIFTEN -->
+            <div class="step">
+                <h3>01. Überschriften</h3>
+                <p>Überschriften strukturieren deinen Text. Es gibt sie von <code>&lt;h1&gt;</code> (am größten) bis <code>&lt;h6&gt;</code> (am kleinsten).</p>
+                <ul class="step-list">
+                    <li><code>&lt;h1&gt;Hauptüberschrift&lt;/h1&gt;</code></li>
+                    <li><code>&lt;h2&gt;Unterüberschrift&lt;/h2&gt;</code></li>
+                </ul>
+            </div>
+
+            <!-- TEXTE & ABSÄTZE -->
+            <div class="step">
+                <h3>02. Texte & Absätze</h3>
+                <p>Fließtext wird in Absätze gepackt. Mit <code>&lt;strong&gt;</code> kannst du Wörter fett drucken.</p>
+                <ul class="step-list">
+                    <li><code>&lt;p&gt;Das ist ein normaler Textabsatz.&lt;/p&gt;</code></li>
+                    <li><code>&lt;p&gt;Dieser Text ist &lt;strong&gt;wichtig&lt;/strong&gt;.&lt;/p&gt;</code></li>
+                </ul>
+            </div>
+
+            <!-- LINKS & BILDER -->
+            <div class="step">
+                <h3>03. Links & Bilder</h3>
+                <p>Verknüpfe andere Webseiten oder binde Bilder in deine Seite ein.</p>
+                <ul class="step-list">
+                    <li><code>&lt;a href="https://github.com" target="_blank"&gt;Link zu GitHub&lt;/a&gt;</code></li>
+                    <li><code>&lt;img src="bild.jpg" alt="Beschreibung des Bildes"&gt;</code></li>
+                </ul>
+            </div>
+
+            <!-- LISTEN -->
+            <div class="step">
+                <h3>04. Listen</h3>
+                <p>Mit Listen kannst du Stichpunkte übersichtlich darstellen.</p>
+                <ul class="step-list">
+                    <li><code>&lt;ul&gt;</code> – Erstellt eine Aufzählung (Bullet Points)</li>
+                    <li><code>&lt;li&gt;Punkt 1&lt;/li&gt;</code> – Ein einzelner Listenpunkt</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Anleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
