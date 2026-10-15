@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Menü verstehen – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Das Navigationsmenü 🧭</h1>
+            <p class="subtitle">Wie baut man ein professionelles Menü und wie sorgt man dafür, dass man es nicht auf jeder Unterseite einzeln kopieren muss?</p>
+        </section>
+
+        <h2>Der Trick: Einmal ändern, überall aktuell</h2>
+
+        <div class="card-grid">
+
+            <!-- SCHRITT 1: DIE NAV.HTML -->
+            <div class="step">
+                <h3>01. Die Menü-Datei (<code>nav.html</code>)</h3>
+                <p>Anstatt den HTML-Code für das Menü in jede einzelne Seite zu schreiben, erstellen wir eine eigene Datei namens <code>nav.html</code>.</p>
+                <ul class="step-list">
+                    <li>Diese Datei enthält nur den reinen HTML-Code für dein Logo und deine Links (<code>&lt;nav&gt;...&lt;/nav&gt;</code>).</li>
+                    <li>Fügst du hier einen neuen Menüpunkt hinzu, taucht er automatisch überall auf!</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 2: DER PLATZHALTER -->
+            <div class="step">
+                <h3>02. Der Platzhalter im HTML</h3>
+                <p>Auf all deinen anderen Seiten (wie <code>index.html</code> oder <code>kontakt.html</code>) brauchst du im Kopfbereich nur diesen einen Platzhalter:</p>
+                <ul class="step-list">
+                    <li><code>&lt;header id="header-placeholder"&gt;&lt;/header&gt;</code></li>
+                    <li>Das ist wie ein leerer Koffer, in den das Menü gleich hineingeladen wird.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 3: DIE JAVASCRIPT-MAGIE -->
+            <div class="step">
+                <h3>03. Das Laden per JavaScript (Fetch)</h3>
+                <p>Damit sich der Platzhalter füllt, nutzen wir einen kleinen JavaScript-Befehl am Ende der Seite:</p>
+                <ul class="step-list">
+                    <li><code>fetch('nav.html')</code> holt sich den Inhalt aus deiner Menü-Datei.</li>
+                    <li><code>.then(data => ...)</code> packt diesen Inhalt in deinen Platzhalter hinein.</li>
+                    <li>Dadurch wird das Menü beim Laden der Seite vollautomatisch eingefügt!</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 4: AUFBAU DES MENÜS -->
+            <div class="step">
+                <h3>04. So sieht der Code in der `nav.html` aus</h3>
+                <p>Ein typisches Agentur-Menü besteht aus einem Logo, normalen Links und einem Dropdown:</p>
+                <ul class="step-list">
+                    <li><code>&lt;a href="index.html" class="logo"&gt;DeinName.&lt;/a&gt;</code></li>
+                    <li>Einer Liste von Links (<code>&lt;ul class="nav-links"&gt;</code>)</li>
+                    <li>Einem optionalen Dropdown-Bereich für deine Unterseiten und Materialien.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
