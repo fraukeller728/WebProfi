@@ -11,6 +11,14 @@
 
     <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
     <header id="header-placeholder"></header>
+     <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 
     <main>
         <!-- HERO SECTION -->
@@ -86,13 +94,6 @@
         </div>
     </main>
 
-    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-    </script>
+   
 </body>
 </html>
