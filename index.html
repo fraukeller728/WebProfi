@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt: Meine erste Website – Schritt-für-Schritt</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Meine erste Website. 🚀</h1>
+            <p class="subtitle">Willkommen zum Projekt! In den nächsten Schritten erstellst du deine eigene Webseite mit HTML und CSS und veröffentlichst sie kostenlos im Internet.</p>
+        </section>
+
+        <h2>Schritt-für-Schritt Anleitung</h2>
+
+        <div class="card-grid">
+
+            <!-- SCHRITT 1 -->
+            <div class="step">
+                <h3>01. GitHub-Account erstellen</h3>
+                <p>GitHub ist die Plattform, auf der Entwickler_innen ihren Code speichern und Webseiten veröffentlichen.</p>
+                <ul class="step-list">
+                    <li>Gehe auf <a href="https://github.com/" target="_blank">github.com</a> und klicke auf <strong>Sign up</strong>.</li>
+                    <li>Nutze deine (Schul-)E-Mail-Adresse und wähle ein sicheres Passwort.</li>
+                    <li>Bestätige den Verifizierungscode in deinem E-Mail-Postfach.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 2 -->
+            <div class="step">
+                <h3>02. Neues Repository (Projekt) anlegen</h3>
+                <p>Ein Repository ist dein Online-Projektordner für die Webseite.</p>
+                <ul class="step-list">
+                    <li>Klicke oben rechts auf das <strong>Plus-Zeichen (+)</strong> &rarr; <strong>New repository</strong>.</li>
+                    <li>Vergib einen Namen (z. B. <code>meine-erste-website</code>).</li>
+                    <li><strong>Wichtig:</strong> Wähle <code>Public</code> (Öffentlich), damit die Seite erreichbar ist.</li>
+                    <li>Setze den Haken bei <strong>Add a README file</strong>.</li>
+                    <li>Klicke unten auf <strong>Create repository</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 3 -->
+            <div class="step">
+                <h3>03. Dateien erstellen (HTML & CSS)</h3>
+                <p>Jetzt bauen wir die Struktur und das Design deiner Website.</p>
+                <ul class="step-list">
+                    <li>Klicke auf <strong>Add file</strong> &rarr; <strong>Create new file</strong>.</li>
+                    <li>Nenne die Datei exakt <code>index.html</code> (deine Startseite) und füge deinen HTML-Code ein.</li>
+                    <li>Speichere mit <strong>Commit changes...</strong>.</li>
+                    <li>Erstelle eine zweite Datei namens <code>style.css</code> für dein Design.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 4 -->
+            <div class="step">
+                <h3>04. Webseite kostenlos online stellen</h3>
+                <p>Mit GitHub Pages wird dein Code zu einer echten Live-Website!</p>
+                <ul class="step-list">
+                    <li>Klicke oben in deinem Repository auf <strong>Settings</strong>.</li>
+                    <li>Wähle in der linken Menüleiste <strong>Pages</strong>.</li>
+                    <li>Stelle unter <em>Build and deployment &gt; Branch</em> von <code>None</code> auf <code>main</code> um.</li>
+                    <li>Klicke auf <strong>Save</strong>. Nach ca. 2 Minuten ist deine Seite unter deinem Link erreichbar!</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- CHEAT SHEET BEREICH -->
+        <h2>Nützliche Bausteine (HTML & CSS Cheat Sheet)</h2>
+        <div class="step">
+            <h3>Wichtige HTML-Tags zum Ausprobieren:</h3>
+            <ul class="step-list">
+                <li><code>&lt;h1&gt;Überschrift&lt;/h1&gt;</code> – Hauptüberschrift</li>
+                <li><code>&lt;p&gt;Mein Text...&lt;/p&gt;</code> – Textabsatz</li>
+                <li><code>&lt;a href="https://..."&gt;Link-Text&lt;/a&gt;</code> – Hyperlink</li>
+                <li><code>&lt;img src="bild.jpg" alt="Beschreibung"&gt;</code> – Bild einfügen</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
