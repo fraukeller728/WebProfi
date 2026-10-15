@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>CSS Basics 🎨</h1>
+            <p class="subtitle">Während HTML das Gerüst baut, sorgt CSS für das Aussehen. Hier lernst du, wie du Farben, Schriften und Abstände einstellst.</p>
+        </section>
+
+        <h2>Wie funktioniert CSS?</h2>
+
+        <div class="card-grid">
+
+            <!-- GRUNDSTRUKTUR -->
+            <div class="step">
+                <h3>01. Der Aufbau von CSS</h3>
+                <p>CSS besteht aus einem <strong>Selektor</strong> (welches Element soll verändert werden?) und den <strong>Eigenschaften</strong> in geschweiften Klammern.</p>
+                <ul class="step-list">
+                    <li><code>h1 { color: blue; }</code></li>
+                    <li><em>Erklärung:</em> Alle Hauptüberschriften (<code>h1</code>) erhalten die Textfarbe Blau.</li>
+                </ul>
+            </div>
+
+            <!-- FARBEN & HINTERGRÜNDE -->
+            <div class="step">
+                <h3>02. Farben & Hintergründe</h3>
+                <p>Du kannst Farben über englische Namen, Hex-Codes (z. B. <code>#000000</code>) oder RGB-Werte definieren.</p>
+                <ul class="step-list">
+                    <li><code>background-color: #fafafa;</code> – Ändert die Hintergrundfarbe.</li>
+                    <li><code>color: #333333;</code> – Ändert die Textfarbe.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRIFTEN & TEXT -->
+            <div class="step">
+                <h3>03. Schriften & Text-Styling</h3>
+                <p>Bestimme, wie deine Schriftarten aussehen und wie groß sie sein sollen.</p>
+                <ul class="step-list">
+                    <li><code>font-family: Arial, sans-serif;</code> – Legt die Schriftart fest.</li>
+                    <li><code>font-size: 1.5rem;</code> – Ändert die Schriftgröße.</li>
+                    <li><code>text-align: center;</code> – Zentriert den Text.</li>
+                </ul>
+            </div>
+
+            <!-- ABSTÄNDE & RAHMEN -->
+            <div class="step">
+                <h3>04. Abstände & Rahmen (Box-Model)</h3>
+                <p>Mit Abständen und Rahmen bringst du Struktur und Luft in deine Inhalte.</p>
+                <ul class="step-list">
+                    <li><code>padding: 20px;</code> – Innenabstand (Platz innerhalb eines Elements).</li>
+                    <li><code>margin: 40px;</code> – Außenabstand (Platz um das Element herum).</li>
+                    <li><code>border: 1px solid #eaeaea;</code> – Erstellt einen feinen Rahmen.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Anleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
