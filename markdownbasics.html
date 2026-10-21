@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown & YAML Cheat Sheet – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Markdown & YAML Basics ✍️</h1>
+            <p class="subtitle">Lerne die Grundlagen der Syntax kennen: Wie du Metadaten in YAML festlegst und Texte in Markdown schnell und einfach formatierst.</p>
+        </section>
+
+        <h2>1. Was ist YAML Front Matter?</h2>
+
+        <div class="step">
+            <h3>Metadaten am Anfang jeder Datei</h3>
+            <p>Jede Markdown-Datei für GitHub Pages beginnt ganz oben mit einem Kopfbereich in <strong>YAML</strong>. Dieser wird zwischen zwei Zeilen mit <code>---</code> eingeschlossen:</p>
+            
+            <div style="background: #111; color: #fff; padding: 20px; border-radius: 6px; margin-top: 15px; font-family: monospace; font-size: 0.85rem; line-height: 1.5;">
+<pre>---
+layout: default
+title: "Willkommen auf meiner Website"
+description: "Eine kurze Beschreibung für Suchmaschinen"
+---</pre>
+            </div>
+        </div>
+
+        <h2>2. Die wichtigsten Markdown-Befehle</h2>
+
+        <div class="card-grid">
+
+            <div class="step">
+                <h3>Überschriften</h3>
+                <p>Verwende Raute-Zeichen (<code>#</code>) am Zeilenanfang:</p>
+                <ul class="step-list">
+                    <li><code># Hauptüberschrift (H1)</code></li>
+                    <li><code>## Unterüberschrift (H2)</code></li>
+                    <li><code>### Kleine Überschrift (H3)</code></li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Text-Formatierung</h3>
+                <p>Hebe wichtige Wörter im Text hervor:</p>
+                <ul class="step-list">
+                    <li><code>**Fetter Text**</code> &rarr; <strong>Fetter Text</strong></li>
+                    <li><code>*Kursiver Text*</code> &rarr; <em>Kursiver Text</em></li>
+                    <li><code>~~Durchgestrichen~~</code> &rarr; <del>Durchgestrichen</del></li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Links & Bilder</h3>
+                <p>Einfaches Einbinden von Verweisen und Medien:</p>
+                <ul class="step-list">
+                    <li><code>[Link-Text](https://github.com)</code> &rarr; Web-Link</li>
+                    <li><code>[Unterseite](ueber-mich.html)</code> &rarr; Link zu eigener Seite</li>
+                    <li><code>![Bildbeschreibung](mein-bild.jpg)</code> &rarr; Bild anzeigen</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Listen & Aufzählungen</h3>
+                <p>Strukturiere deine Stichpunkte übersichtlich:</p>
+                <ul class="step-list">
+                    <li><code>- Erster Punkt</code> (Spiegelstrich)</li>
+                    <li><code>- Zweiter Punkt</code></li>
+                    <li><code>1. Nummerierter Punkt</code></li>
+                    <li><code>2. Nummerierter Punkt</code></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- KOPIERFERTIGER BEISPIELCODE -->
+        <h2>Hilfe-Bereich: Komplettes Markdown-Beispiel</h2>
+        <div class="step">
+            <h3>Kopierfertige Vorlage für eine `index.md`</h3>
+            <p>So kann deine komplette Markdown-Datei aussehen:</p>
+            
+            <div style="background: #111; color: #fff; padding: 20px; border-radius: 6px; margin-top: 15px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; line-height: 1.5;">
+<pre>---
+layout: default
+title: "Startseite"
+---
+
+# Hallo Welt! 🚀
+
+Willkommen auf meiner neuen Website. Ich erstelle diese Seite im Informatikunterricht.
+
+## Meine Themen
+- Erfahren, wie Markdown funktioniert
+- GitHub Pages kennenlernen
+- Eigene Inhalte im Web veröffentlichen
+
+Besuche auch meine [Über Mich Seite](ueber-mich.html)!</pre>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
