@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_config.yml einrichten – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Die Konfiguration (`_config.yml`) ⚙️</h1>
+            <p class="subtitle">Die Datei <code>_config.yml</code> ist die Steuerung deiner Website auf GitHub. Hier wählst du dein Design-Theme aus und legst Titel und Untertitel fest.</p>
+        </section>
+
+        <h2>Wie funktioniert die `_config.yml`?</h2>
+
+        <div class="card-grid">
+
+            <!-- SCHRITT 1 -->
+            <div class="step">
+                <h3>01. Datei im Hauptverzeichnis anlegen</h3>
+                <p>Erstelle die Konfigurationsdatei direkt im Wurzelverzeichnis (root) deines Repositories.</p>
+                <ul class="step-list">
+                    <li>Klicke auf <strong>Add file</strong> &rarr; <strong>Create new file</strong>.</li>
+                    <li>Nenne die Datei exakt <code>_config.yml</code> (Achte unbedingt auf den Unterstrich <code>_</code> am Anfang!).</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 2 -->
+            <div class="step">
+                <h3>02. Syntax beachten (YAML)</h3>
+                <p>YAML ist sehr übersichtlich, aber streng bei der Schreibweise:</p>
+                <ul class="step-list">
+                    <li>Schlüssel und Wert werden durch einen Doppelpunkt getrennt (z. B. <code>title: Mein Titel</code>).</li>
+                    <li>Nach dem Doppelpunkt kommt immer ein <strong>Leerzeichen</strong>.</li>
+                    <li>Nutze keine Tabulatoren, sondern normale Leerzeichen für Einrückungen.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 3 -->
+            <div class="step">
+                <h3>03. Verfügbare Themes</h3>
+                <p>GitHub Pages bietet kostenlose vorgefertigte Layouts (Themes), die du einfach über die Config aktivieren kannst:</p>
+                <ul class="step-list">
+                    <li><code>jekyll-theme-cayman</code> (Modern & Bunt)</li>
+                    <li><code>jekyll-theme-minimal</code> (Schlicht & Minimalistisch)</li>
+                    <li><code>jekyll-theme-architect</code> (Klar & Strukturiert)</li>
+                    <li><code>jekyll-theme-tactile</code> (Kompakt & Übersichtlich)</li>
+                    <li><code>jekyll-theme-slate</code> (Dunkles Design / Dark Mode)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- HILFE-BEREICH: KOPIERFERTIGER CONFIG-CODE -->
+        <h2>Hilfe-Bereich: Kopierfertiger Code für die `_config.yml`</h2>
+        <div class="step">
+            <h3>Beispiel-Code zum Kopieren</h3>
+            <p>Kopiere diesen Code in deine <code>_config.yml</code>-Datei und passe den Titel, die Beschreibung und deinen Namen an:</p>
+            
+            <div style="background: #111; color: #fff; padding: 20px; border-radius: 6px; margin-top: 15px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; line-height: 1.5;">
+<pre># --- HOUPTEINSTELLUNGEN DER WEBSITE ---
+title: "Mein Schulprojekt"
+description: "Meine erste eigene Website mit GitHub Pages und Markdown"
+author: "Dein Name"
+
+# --- DESIGN-THEME AUSWÄHLEN ---
+# Mögliche Optionen: jekyll-theme-cayman, jekyll-theme-minimal, jekyll-theme-architect, jekyll-theme-slate
+theme: jekyll-theme-cayman
+
+# --- OPTIONALE PLUGINS ---
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag</pre>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
