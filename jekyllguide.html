@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website mit Markdown & YAML – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Webseite mit Markdown & YAML 📝</h1>
+            <p class="subtitle">GitHub Pages kann aus einfachen Markdown-Dateien automatisch eine fertige Website generieren. Du brauchst dafür kaum HTML – sondern nur Markdown und YAML!</p>
+        </section>
+
+        <h2>In 4 Schritten zur Markdown-Website</h2>
+
+        <div class="card-grid">
+
+            <!-- SCHRITT 1 -->
+            <div class="step">
+                <h3>01. Konfiguration anlegen (`_config.yml`)</h3>
+                <p>GitHub nutzt den Generator <strong>Jekyll</strong>. Mit einer Konfigurationsdatei wählst du ein vorgefertigtes Design (Theme) aus.</p>
+                <ul class="step-list">
+                    <li>Erstelle im Repository eine neue Datei namens <code>_config.yml</code>.</li>
+                    <li>Schreibe deinen Titel und wähle ein GitHub-Theme aus (z. B. <code>theme: jekyll-theme-cayman</code> oder <code>jekyll-theme-minimal</code>).</li>
+                    <li>Speichere mit <strong>Commit changes...</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 2 -->
+            <div class="step">
+                <h3>02. Startseite in Markdown (`index.md`)</h3>
+                <p>Erstelle deine Startseite als Markdown-Datei statt als HTML-Datei.</p>
+                <ul class="step-list">
+                    <li>Erstelle eine neue Datei namens <code>index.md</code> (oder erstelle eine <code>README.md</code>).</li>
+                    <li>Verwende oben den <strong>YAML Front Matter</strong> Bereich zwischen zwei <code>---</code> Linien.</li>
+                    <li>Schreibe deinen eigentlichen Text darunter in einfacher Markdown-Schreibweise.</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 3 -->
+            <div class="step">
+                <h3>03. Weitere Seiten anlegen</h3>
+                <p>Unterseiten werden genauso wie die Startseite erstellt.</p>
+                <ul class="step-list">
+                    <li>Erstelle z. B. eine Datei <code>ueber-mich.md</code> oder <code>projekte.md</code>.</li>
+                    <li>Füge oben den YAML-Kopf mit dem Titel der Seite ein.</li>
+                    <li>Verlinke die Seiten untereinander einfach per Markdown: <code>[Über mich](ueber-mich.html)</code>. (Hinweis: GitHub baut aus <code>.md</code> automatisch <code>.html</code>-Dateien!).</li>
+                </ul>
+            </div>
+
+            <!-- SCHRITT 4 -->
+            <div class="step">
+                <h3>04. GitHub Pages aktivieren</h3>
+                <p>Aktiviere das automatische Erstellen deiner Seite in GitHub.</p>
+                <ul class="step-list">
+                    <li>Gehe im Repository auf <strong>Settings</strong> &rarr; <strong>Pages</strong>.</li>
+                    <li>Stelle den Branch auf <code>main</code> und wähle den Ordner <code>/ (root)</code>.</li>
+                    <li>Nach ca. 1–2 Minuten verwandelt GitHub deine Markdown-Dateien in eine schicke Website!</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
+    </main>
+
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
