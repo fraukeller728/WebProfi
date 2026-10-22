@@ -92,6 +92,55 @@
                 <li><code>&lt;img src="bild.jpg" alt="Beschreibung"&gt;</code> – Bild einfügen</li>
             </ul>
         </div>
+        <!-- HILFE-BEREICH: KOPIERFERTIGE INDEX.HTML VORLAGE -->
+        <h2>Hilfe-Bereich: Kopiervorlage für deine `index.html`</h2>
+        <div class="step">
+            <h3>Dein Start-Code für die Hauptseite</h3>
+            <p>Wenn du ganz neu startest, kannst du diesen Code kopieren, in deine <code>index.html</code> einfügen und anpassen:</p>
+            
+            <div style="background: #111; color: #fff; padding: 20px; border-radius: 6px; margin-top: 15px; overflow-x: auto; font-family: monospace; font-size: 0.85rem; line-height: 1.5;">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Meine Startseite – Mein Projekt&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Automatisches Menü --&gt;
+    &lt;header id="header-placeholder"&gt;&lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section class="hero"&gt;
+            &lt;h1&gt;Willkommen auf meiner Website! 🚀&lt;/h1&gt;
+            &lt;p class="subtitle"&gt;Hier stelle ich mein Projekt vor.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;h2&gt;Über das Projekt&lt;/h2&gt;
+        &lt;div class="card-grid"&gt;
+            &lt;div class="step"&gt;
+                &lt;h3&gt;Mein Thema&lt;/h3&gt;
+                &lt;p&gt;Hier kannst du deinen ersten Text schreiben...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;!-- Skript zum Laden der nav.html --&gt;
+    &lt;script&gt;
+        fetch('nav.html')
+            .then(response =&gt; response.text())
+            .then(data =&gt; {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+        </div>
+
+        
     </main>
 
    
