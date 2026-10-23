@@ -3,88 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt-Guide: Webseiten ohne KI Slop</title>
+    <title>Prompt-Guide: Webseiten mit KI im Editorial-Stil – Code & Launch 🚀</title>
+    <!-- ZENTRALE DESIGN-DATEI -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --accent: #2563eb;
-            --border-color: #e2e8f0;
-            --code-bg: #0f172a;
-            --code-text: #e2e8f0;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 2rem 1rem;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        header {
-            margin-bottom: 3rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 1.5rem;
-        }
-
-        h1 {
-            font-size: 2.25rem;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1.25rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 0.75rem;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            margin-top: 0;
-            color: var(--text-main);
-        }
-
-        p, li {
-            color: var(--text-muted);
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        ul {
-            padding-left: 1.25rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
+        /* Spezifische Ergänzungen für den Prompt-Guide */
         .prompt-box {
-            background-color: var(--code-bg);
-            color: var(--code-text);
+            background-color: #0f172a;
+            color: #e2e8f0;
             padding: 1.25rem;
             border-radius: 6px;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -110,28 +36,35 @@
 </head>
 <body>
 
+    <!-- MENÜBAND VIA JAVASCRIPT-FETCH -->
+    <header id="header-placeholder"></header>
+
     <main>
-        <header>
+        <!-- HERO SECTION -->
+        <section class="hero">
             <h1>Webseiten mit KI erstellen 🚀</h1>
             <p class="subtitle">Anleitung & Prompt-Guide, um den typischen „KI-Einheitsbrei“ zu umgehen und moderne Websites im Editorial- / Magazin-Stil zu bauen.</p>
-        </header>
+        </section>
 
         <h2>So funktioniert's</h2>
-        <div class="card">
-            <h3>Der Workflow für deine Schülerinnen</h3>
-            <p>KIs wie Gemini oder Copilot neigen standardmäßig zu langweiligen Layouts (Lila Verläufe, Bento-Boxen mit Schatten, Einheits-Schriften). Mit diesen vier aufeinanderfolgenden Prompts zwingst du die KI dazu, professionellen, schicken Code im Magazin-Stil zu schreiben, den du direkt in GitHub hochladen kannst.</p>
-            <ul>
-                <li><strong>Schritt 1:</strong> Design-System und CSS-Fundament festlegen (Schriften, Farben, Linien).</li>
-                <li><strong>Schritt 2:</strong> Asymmetrisches Layout und Rhythmus definieren.</li>
-                <li><strong>Schritt 3:</strong> Mikro-Details (Seitenränder, Labels, Print-Ästhetik) ergänzen.</li>
-                <li><strong>Schritt 4:</strong> Code sauber für GitHub aufteilen (`index.html` & `style.css`).</li>
-            </ul>
+        
+        <div class="card-grid">
+            <div class="step" style="grid-column: 1 / -1;">
+                <h3>Der Workflow für deine Schüler_innen</h3>
+                <p>KIs wie Gemini oder Copilot neigen standardmäßig zu langweiligen Layouts (Lila Verläufe, Bento-Boxen mit Schatten, Einheits-Schriften). Mit diesen vier aufeinanderfolgenden Prompts zwingst du die KI dazu, professionellen, schicken Code im Magazin-Stil zu schreiben, den du direkt in GitHub hochladen kannst.</p>
+                <ul class="step-list" style="margin-top: 15px;">
+                    <li><strong>Schritt 1:</strong> Design-System und CSS-Fundament festlegen (Schriften, Farben, Linien).</li>
+                    <li><strong>Schritt 2:</strong> Asymmetrisches Layout und Rhythmus definieren.</li>
+                    <li><strong>Schritt 3:</strong> Mikro-Details (Seitenränder, Labels, Print-Ästhetik) ergänzen.</li>
+                    <li><strong>Schritt 4:</strong> Code sauber für GitHub aufteilen (<code>index.html</code> & <code>style.css</code>).</li>
+                </ul>
+            </div>
         </div>
 
-        <h2>Die 4 Bausteine (Prompts)</h2>
+        <h2 style="margin-top: 40px;">Die 4 Bausteine (Prompts)</h2>
 
         <!-- Schritt 1 -->
-        <div class="card">
+        <div class="step" style="margin-bottom: 25px;">
             <span class="badge">Schritt 1 von 4</span>
             <h3>Das Editorial-Design-System & CSS-Fundament</h3>
             <p>Diesen Prompt schickst du als Erstes an die KI, um den Grundstil zu definieren:</p>
@@ -157,7 +90,7 @@ Erstelle mir dafür zunächst das vollständige CSS-Setup.</pre>
         </div>
 
         <!-- Schritt 2 -->
-        <div class="card">
+        <div class="step" style="margin-bottom: 25px;">
             <span class="badge">Schritt 2 von 4</span>
             <h3>Asymmetrisches Magazin-Layout & Grid-Rhythmus</h3>
             <p>Nutze diesen Prompt im selben Chat, um den Seitenaufbau strukturieren zu lassen:</p>
@@ -177,7 +110,7 @@ Gib mir den vollständigen HTML-Code für dieses Sektions-Raster.</pre>
         </div>
 
         <!-- Schritt 3 -->
-        <div class="card">
+        <div class="step" style="margin-bottom: 25px;">
             <span class="badge">Schritt 3 von 4</span>
             <h3>Mikro-Details & Magazin-Optik</h3>
             <p>Hiermit verleihst du der Seite den echten Feinschliff an den Rändern:</p>
@@ -197,9 +130,9 @@ Füge diese CSS-Detailklassen und HTML-Beispiele hinzu.</pre>
         </div>
 
         <!-- Schritt 4 -->
-        <div class="card">
+        <div class="step" style="margin-bottom: 25px;">
             <span class="badge">Schritt 4 von 4</span>
-            ### Export-Optimierung für GitHub
+            <h3>Export-Optimierung für GitHub</h3>
             <p>Am Ende trennst du den Code sauber auf, um ihn direkt in GitHub hochzuladen:</p>
             <pre class="prompt-box">Ich möchte diesen Code auf GitHub veröffentlichen. Bitte strukturiere das finale Ergebnis perfekt für mein Repository:
 
@@ -211,7 +144,19 @@ Füge diese CSS-Detailklassen und HTML-Beispiele hinzu.</pre>
 
 Gib die Dateien jeweils in eigenen, sauber benannten Code-Blöcken aus.</pre>
         </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" style="color: #111; text-decoration: none; font-weight: 500;">&larr; Zurück zur Hauptanleitung</a>
+        </div>
     </main>
 
+    <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
