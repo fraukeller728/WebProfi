@@ -7,21 +7,7 @@
     <!-- ZENTRALE DESIGN-DATEI -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Spezifische Ergänzungen für den Lückentext und Code-Boxen */
-        .fill-in-box {
-            background-color: #f1f5f9;
-            border: 1px dashed #2563eb;
-            padding: 1.25rem;
-            border-radius: 6px;
-            margin-top: 1rem;
-            font-size: 0.95rem;
-            color: #111;
-        }
-
-        .fill-in-box strong {
-            color: #2563eb;
-        }
-
+        /* Spezifische Ergänzungen für Code-Boxen */
         .prompt-box {
             background-color: #111;
             color: #e2e8f0;
@@ -57,50 +43,32 @@
         <!-- HERO SECTION -->
         <section class="hero">
             <h1>Design deinen eigenen Prompt 🎨</h1>
-            <p class="subtitle">Anleitung für Schüler_innen: Bau dir dein persönliches Prompt-Framework, damit die KI genau die Website generiert, die DU dir vorstellst.</p>
+            <p class="subtitle">Anleitung für Schüler_innen: Nutze die Methode deines persönlichen Creative Directors, um deinen Geschmack in exakte Design-Regeln zu übersetzen.</p>
         </section>
 
         <h2>Warum ein eigener Prompt?</h2>
         <div class="step">
             <h3>Mach die Website zu deinem Projekt!</h3>
-            <p>Wenn du einer KI einfach nur sagst: <em>„Baue mir eine Website“</em>, sieht das Ergebnis meistens langweilig und wie jede andere KI-Seite aus. Damit deine Seite genau deinen Stil, deine Lieblingsfarben und deine Wunsch-Funktionen bekommt, erstellst du in 2 einfachen Schritten deinen eigenen <strong>Master-Prompt</strong>.</p>
+            <p>Wenn du einer KI einfach nur sagst: <em>„Baue mir eine Website“</em>, sieht das Ergebnis meistens langweilig und wie jede andere KI-Seite aus. Damit deine Seite genau deinen Stil, deine Lieblingsfarben und deine Wunsch-Funktionen bekommt, lässt du dir von der KI einen professionellen Master-Prompt im Dialog erstellen.</p>
         </div>
 
-        <h2>Schritt 1: Dein Design-Briefing (Lückentext)</h2>
-        <div class="step" style="margin-top: 20px;">
-            <span class="badge">Schritt 1</span>
-            <h3>Beantworte diese 3 Fragen für deine Seite</h3>
-            <p>Überlege dir, wie deine Website aussehen soll, und fülle die Lücken in Gedanken oder auf einem Zettel aus:</p>
-
-            <div class="fill-in-box">
-                <p><strong>1. Thema & Vibe:</strong><br>
-                „Meine Website ist für <code>[z. B. mein Hobby / mein Haustier / ein Gaming-Portfolio / meinen Blog]</code> und soll <code>[z. B. futuristisch / gemütlich & warm / sportlich & bunt / minimalistisch]</code> wirken.“</p>
-
-                <p><strong>2. Farben & Schriften:</strong><br>
-                „Der Hintergrund soll <code>[Farbe / Hex-Code, z. B. #121212 oder Weiss]</code> sein. Der Text soll <code>[Farbe]</code> sein und als Akzentfarbe nutze ich <code>[z. B. Neon-Grün #00FF66 oder Orange]</code>. Für Überschriften nutze ich die Google-Schrift <code>[z. B. Space Grotesk / Playfair Display / Montserrat]</code>.“</p>
-
-                <p><strong>3. Layout & Extras:</strong><br>
-                „Ich wünsche mir folgende Bausteine: <code>[z. B. eine Fotogalerie / eine Timeline / eine Preistabelle / einen Blog-Raster]</code>. Die Ecken der Elemente sollen <code>[z. B. komplett scharfkantig (0px) / leicht abgerundet / extrem rund]</code> sein.“</p>
-            </div>
-        </div>
-
-        <h2 style="margin-top: 40px;">Schritt 2: Generiere dein Prompt-Framework</h2>
+        <h2 style="margin-top: 40px;">Schritt 1: Der Creative-Director-Prompt</h2>
         <div class="step">
-            <span class="badge">Schritt 2</span>
-            <h3>Der Meta-Prompt für Gemini oder Copilot</h3>
-            <p>Kopiere den folgenden Textblock. Setze deine eigenen Referenzen und Projektinfos ein und schicke den Text an die KI:</p>
+            <span class="badge">Schritt 1</span>
+            <h3>Füttere die KI mit deinen Referenzen</h3>
+            <p>Kopiere den folgenden Textblock. Ersetze in den eckigen Klammern deine Projektinfos und füge deine Design-Referenzen (Links oder Screenshots) ein. Schicke den Text an Gemini oder Copilot:</p>
 
             <pre class="prompt-box">Du bist mein Creative Director. Ich werde dir Referenzen geben, die mir gefallen. Deine Aufgabe ist es, meinen Geschmack in Regeln umzuwandeln, die du befolgen kannst, und diese Regeln dann auf mein Projekt anzuwenden.
 
-MEIN PROJEKT: [Was du erstellst, z. B. eine Landingpage für meinen Kerzenshop / ein 15-sekündiges Produkt-Reel / ein Instagram-Karussell]
+MEIN PROJEKT: [Was du erstellst, z. B. eine Landingpage für ein Gaming-Portfolio / meinen Blog]
 FÜR WEN ES IST: [Deine Zielgruppe in einem Satz]
-TOOL, IN DEM ICH ES ERSTELLE: [Claude / ChatGPT / Cursor / Lovable / Kling / Runway / Veo / Canva]
+TOOL, IN DEM ICH ES ERSTELLE: [ChatGPT / Claude / Cursor / Lovable]
 
 MEINE REFERENZEN (beschriftet, damit wir darüber sprechen können):
 Referenz 1: [Link hochladen oder einfügen]. Was mir zuerst ins Auge fiel: [Ein Satz oder „nicht sicher“]
 Referenz 2: [Link hochladen oder einfügen]. Was mir zuerst ins Auge fiel: [Ein Satz]
 Referenz 3: [Link hochladen oder einfügen]. Was mir zuerst ins Auge fiel: [Ein Satz]
-(Füge bis zu 5 hinzu. Lade für einen Videoclip 3 bis 4 Screenshots vom Anfang, der Mitte und dem Ende in der richtigen Reihenfolge hoch.)
+(Füge bis zu 5 hinzu.)
 
 Arbeite in vier Schritten. Stoppe nach Schritt 2 und warte auf mich.
 
@@ -110,18 +78,16 @@ Erkläre mir für jede Referenz genau, was funktioniert. Verwende die echten Des
 ⚬ Typografie: Schriftstil (Serife, Serifenlos, Kondensiert, Monospace), Schriftstärke, Kontrast bei der Schriftgröße, Buchstabenabstand, Zeilenabstand, Großbuchstaben (All-Caps) oder nicht
 ⚬ Farbe: Hauptfarbe, Akzentfarbe, Anteile der jeweiligen Farben, warm oder kühl, Kontraststufe, Farbverläufe (Gradients) oder Körnung (Grain)
 ⚬ Layout und Abstände: Raster (Grid), Ausrichtung, Menge an Leerraum (Whitespace), was man zuerst sieht und warum
-⚬ Komposition (Bilder und Video): Einstellungsgröße, Kameraperspektive, Bildausschnitt (Framing), Schärfentiefe, Beleuchtung
-⚬ Bewegung (Websites und Video): Was sich bewegt, wie es startet und stoppt (Easing), Geschwindigkeit, Kamerabewegungen, Übergänge, Effekte mit Namen
-⚬ Pacing (Video): Ungefähre Länge jeder Einstellung, wo die Schnitte liegen, wie schnell sich der Schnitt anfühlt
+⚬ Komposition: Einstellungsgröße, Kameraperspektive, Bildausschnitt (Framing), Schärfentiefe, Beleuchtung
+⚬ Bewegung: Was sich bewegt, wie es startet und stoppt (Easing), Geschwindigkeit, Kamerabewegungen, Übergänge, Effekte mit Namen
 ⚬ Stimmung: 3 Wörter, die beschreiben, wie es wirkt
-  Wenn du etwas nicht klar erkennen kannst, sage es. Rate nicht. Wenn ich einen Link geschickt habe, den du nicht öffnen kannst, sage es mir und bitte um einen Screenshot.
+Wenn du etwas nicht klar erkennen kannst, sage es. Rate nicht.
 
 SCHRITT 2: MICH FRAGEN, WAS MIR GEFÄLLT
 Erstelle eine nummerierte Checkliste mit den spezifischen Elementen, die du in allen meinen Referenzen gefunden hast (ziele auf 10 bis 15 Punkte ab). Bitte mich, jeden Punkt mit BEHALTEN (KEEP), ÄNDERN (CHANGE) oder ÜBERSPRINGEN (SKIP) zu markieren und dir alles zu nennen, was ich möchte, das nicht auf der Liste steht. Stoppe dann und warte.
 
 SCHRITT 3: MEIN STYLE-BRIEF SCHREIBEN
 Schreibe nach meiner Antwort ein wiederverwendbares Style-Briefing von unter 250 Wörtern mit diesen Überschriften:
-
 ⚬ Das Gefühl (ein Satz)
 ⚬ Typografie
 ⚬ Farbe (mit Hex-Codes, wenn du sie schätzen kannst)
@@ -129,18 +95,19 @@ Schreibe nach meiner Antwort ein wiederverwendbares Style-Briefing von unter 250
 ⚬ Bewegung und Pacing (Motion & Pacing)
 ⚬ Immer tun (5 Regeln)
 ⚬ Niemals tun (5 Regeln, einschließlich des generischen KI-Looks, den dieses Briefing vermeiden soll)
-  Schreibe jede Regel so, dass ein Designer, ein Entwickler oder ein KI-Videotool sie ohne weiteren Kontext befolgen kann. Ich werde dieses Briefing speichern und wiederverwenden.
+Schreibe jede Regel so, dass ein Designer, ein Entwickler oder eine KI sie ohne weiteren Kontext befolgen kann. Ich werde dieses Briefing speichern und wiederverwenden.
 
 SCHRITT 4: AUF MEIN PROJEKT ANWENDEN
-Nutze das Briefing, um mein Projekt in dem von mir genannten Tool zu erstellen. Kopiere keine einzelne Referenz. Mische das, was ich behalten habe, zu etwas Eigenständigem für meine Marke. Wenn mein Tool ein KI-Videotool ist, schreibe den Video-Prompt in dieser Reihenfolge: Subjekt, Aktion, Kamerabewegung, Beleuchtung, Stil, Pacing. Liste nach der Erstellung auf, welche Briefing-Regeln du wo angewendet hast, damit die Übereinstimmung sehen kann.</pre>
+Nutze das Briefing, um mein Projekt in dem von mir genannten Tool zu erstellen. Kopiere keine einzelne Referenz. Mische das, was ich behalten habe, zu etwas Eigenständigem für meine Marke. Liste nach der Erstellung auf, welche Briefing-Regeln du wo angewendet hast, damit ich die Übereinstimmung sehen kann.</pre>
         </div>
 
-        <h2 style="margin-top: 40px;">Schritt 3: Loslegen & Code generieren</h2>
+        <h2 style="margin-top: 40px;">Schritt 2: Das Style-Briefing erstellen & Code generieren</h2>
         <div class="step">
-            <h3>So nutzt du dein Ergebnis:</h3>
+            <h3>So führst du das Projekt zum Erfolg:</h3>
             <ul class="step-list">
-                <li>Die KI gibt dir jetzt <strong>deine eigenen, maßgeschneiderten Prompts</strong> aus.</li>
-                <li>Kopiere diese Prompts nacheinander in einen neuen Chat, um deinen HTML- und CSS-Code generieren zu lassen.</li>
+                <li>Beantworte die Checkliste der KI (Schritt 2 des Prompts) mit <strong>KEEP, CHANGE oder SKIP</strong>.</li>
+                <li>Lass dir im nächsten Schritt dein maßgeschneidertes <strong>Style-Briefing</strong> ausgeben.</li>
+                <li>Nutze dieses Briefing als Basis, um dir von der KI deinen finalen HTML- und CSS-Code für deine Website schreiben zu lassen.</li>
                 <li>Lade die fertigen Dateien (<code>index.html</code> und <code>style.css</code>) in dein GitHub-Repository hoch, um deine Website live zu schalten! 🚀</li>
             </ul>
         </div>
