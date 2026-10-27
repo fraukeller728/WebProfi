@@ -242,7 +242,7 @@ code {
     }
 
     .nav-links {
-        display: none; /* Standardmäßig auf dem Handy versteckt */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -257,45 +257,23 @@ code {
         align-items: flex-start;
     }
 
-    /* Wird durch JavaScript aktiviert, wenn man auf den Hamburger klickt */
     .nav-links.active {
         display: flex;
     }
 
-    /* Mobiles Dropdown anpassen */
-    .mega-dropdown {
-        position: static;
-        box-shadow: none;
-        border: none;
-        padding-left: 10px;
-        margin-top: 10px;
-        display: block; /* Auf Mobilgeräten direkt untereinander anzeigen */
-    }
-    
-    .dropdown .mega-dropdown {
-        background: #f8fafc;
-        border-radius: 6px;
-        padding: 10px;
-    }
-}
-
-/* --- MOBILES DROPDOWN FIX --- */
-@media (max-width: 768px) {
-    /* Auf dem Handy standardmäßig verstecken */
-    .nav-links .mega-dropdown {
+    /* WICHTIG: Das Dropdown auf dem Handy standardmäßig komplett verstecken */
+    .nav-links .dropdown .mega-dropdown {
         display: none !important;
-        position: static;
-        box-shadow: none;
-        border: none;
-        padding-left: 15px;
-        margin-top: 10px;
-        background: #f8fafc;
-        border-radius: 6px;
-        width: 100%;
-        box-sizing: border-box;
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: #f8fafc !important;
+        padding: 10px !important;
+        margin-top: 10px !important;
+        width: 100% !important;
     }
 
-    /* Wenn die Klasse .open aktiv ist, wird es angezeigt */
+    /* Nur wenn die Klasse .open vom Javascript hinzugefügt wird, anzeigen */
     .nav-links .dropdown.open .mega-dropdown {
         display: flex !important;
     }
