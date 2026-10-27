@@ -279,3 +279,26 @@ code {
     }
 }
 
+/* --- MOBILES DROPDOWN FIX --- */
+@media (max-width: 768px) {
+    /* Auf dem Handy standardmäßig verstecken */
+    .nav-links .mega-dropdown {
+        display: none !important;
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 15px;
+        margin-top: 10px;
+        background: #f8fafc;
+        border-radius: 6px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Wenn die Klasse .open aktiv ist, wird es angezeigt */
+    .nav-links .dropdown.open .mega-dropdown {
+        display: flex !important;
+    }
+}
+
+
