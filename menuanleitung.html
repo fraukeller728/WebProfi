@@ -111,11 +111,36 @@
 
     <!-- SKRIPT ZUM AUTOMATISCHEN LADEN DES MENÜS -->
     <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-    </script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+    // Globaler Klick-Listener
+    document.addEventListener('click', function(event) {
+        // 1. Hamburger-Menü öffnen/schließen
+        const hamburger = event.target.closest('.hamburger');
+        if (hamburger) {
+            const navLinks = document.getElementById('nav-links');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+            }
+        }
+
+        // 2. Mobiles Dropdown für "Materialien" umschalten
+        const dropBtn = event.target.closest('.drop-btn');
+        if (dropBtn) {
+            // Nur auf kleinen Bildschirmen ausführen
+            if (window.innerWidth <= 768) {
+                event.preventDefault(); // Verhindert den Standard-Link-Sprung
+                const dropdownParent = dropBtn.closest('.dropdown');
+                if (dropdownParent) {
+                    dropdownParent.classList.toggle('open');
+                }
+            }
+        }
+    });
+</script>
 </body>
 </html>
